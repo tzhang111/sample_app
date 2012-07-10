@@ -24,6 +24,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="faker" version="0.3.1" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="gravatar_image_tag" version="0.1.0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
@@ -73,6 +79,12 @@
     <requirement>
       <requirement>
         <dependency name="webrat" version="0.7.1" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="will_paginate" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -133,6 +145,9 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-expectations (v2.10.0, E:/Ruby193/lib/ruby/gems/1.9.1/gems/rspec-expectations-2.10.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.10.0, E:/Ruby193/lib/ruby/gems/1.9.1/gems/rspec-2.10.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-core (v2.10.1, E:/Ruby193/lib/ruby/gems/1.9.1/gems/rspec-core-2.10.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] gravatar_image_tag (v1.1.3, E:/Ruby193/lib/ruby/gems/1.9.1/gems/gravatar_image_tag-1.1.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] factory_girl_rails (v3.5.0, E:/Ruby193/lib/ruby/gems/1.9.1/gems/factory_girl_rails-3.5.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] factory_girl (v3.5.0, E:/Ruby193/lib/ruby/gems/1.9.1/gems/factory_girl-3.5.0)" level="application" />
   </component>
 </module>
 

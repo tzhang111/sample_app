@@ -2,7 +2,7 @@ require 'spec_helper'
 describe User do
   before(:each) do
     @attr = {:name => "Example User", :email => "user@example.com",
-    :password => "foobar", :password_confirmation => "foobar"}
+             :password => "foobar", :password_confirmation => "foobar"}
   end
 
   it "should create a new instance given valid attributes" do
@@ -42,9 +42,9 @@ describe User do
   end
 
   it "should reject email addresses identical up to case" do
-      updated_email = @attr[:email].upcase
+    updated_email = @attr[:email].upcase
     User.create!(@attr.merge(:email => updated_email))
-      user_with_duplicate_email = User.new(@attr)
+    user_with_duplicate_email = User.new(@attr)
     user_with_duplicate_email.should_not be_valid
   end
 
@@ -77,17 +77,17 @@ describe User do
       it "should have an encrypted password attribute" do
         @user.should respond_to(:encrypted_password)
       end
-      
+
       it "should set the encrypted password" do
-      	@user.encrypted_password.should_not be_blank
+        @user.encrypted_password.should_not be_blank
       end
-      
+
       describe "has_password? method" do
-      	it "should be true if the password match" do
+        it "should be true if the password match" do
           @user.has_password?(@attr[:password]).should be_true
-      	end
-      	
-      	it "should be false if the password doesn't match" do
+        end
+
+        it "should be false if the password doesn't match" do
           @user.has_password?("invalid").should be_false
         end
 
@@ -108,6 +108,25 @@ describe User do
           end
         end
       end
+    end
+  end
+
+  describe "admin attribute" do
+    before(:each) do
+      @user = User.create!(@attr)
+    end
+
+    it "should respond to admin" do
+      @user.should responed_to(:admin)
+    end
+
+    it "should not be admin by default" do
+      @user.should_not be_admin
+    end
+
+    it "should be convertible to an admin" do
+      @user.toggle!(:admin)
+      @user.should be_admin
     end
   end
 end
