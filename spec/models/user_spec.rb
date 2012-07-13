@@ -117,7 +117,7 @@ describe User do
     end
 
     it "should respond to admin" do
-      @user.should responed_to(:admin)
+      @user.should respond_to(:admin)
     end
 
     it "should not be admin by default" do
